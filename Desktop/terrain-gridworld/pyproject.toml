@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terrain-gridworld"
+version = "0.1.0"
+description = "A Gymnasium grid world of procedurally generated Perlin-noise terrain"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["gymnasium>=1.0", "numpy>=1.24", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+render = ["matplotlib>=3.7"]
+dev = ["matplotlib>=3.7", "pytest>=7"]
+
+[tool.setuptools]
+packages = ["terrain_gridworld"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
